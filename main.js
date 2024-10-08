@@ -8,43 +8,30 @@
 
 
 
+// Avevo immaginato di salvare i numeri in un array e di sostituirli con le stringhe seguendo le indicazione scelte, visto che avevamo studiato come si sostituiscono i dati all'interno di un array
+
+
 function creaNumeri(massimo){
-    let numeri=[];
+    
     for (let i=1; i<=massimo; i++) {
-        numeri.push(i); 
+        if (i % 15 === 0){
+            console.log("fizzBuzz");
+    
+        } else if (i % 3 === 0){
+            console.log("Fizz");
+    
+        } else if (i % 5 === 0){
+            console.log("Buzz");
+             ;
+        } else {
+            console.log(i);
+            
+        }
     }
-    return numeri;
 }
 
 
 let massimo = parseInt(prompt("Inserisci il numero massimo da raggiungere"));
 
-numeriNorm = creaNumeri(massimo);
-
-for (let j=0; j<=massimo; j++) {
-
-    if (numeriNorm[j] % 15 === 0){
-        numeriNorm[j] = "fizzBuzz";
-
-    } else if (numeriNorm[j] % 3 === 0){
-        numeriNorm[j] = "Fizz";
-
-    } else if (numeriNorm[j] % 5 === 0){
-        numeriNorm[j] = "Buzz";
-    }
-
-    
-}
-
 console.log("Stampa dei risultati:");
-
-for (let k=0; k<massimo; k++) {
-    console.log(numeriNorm[k]);
-
-}
-
-
-
-
-
-
+creaNumeri(massimo);
